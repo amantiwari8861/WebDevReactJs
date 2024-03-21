@@ -13,37 +13,37 @@
         // 2.binary operator (2 operand is required)
         // 3.ternary operator (3 operand is required)
 
-    // 1. unary eg. ++ , --
+        // 1. unary eg. ++ , --
 
-    // var num=10;
-    // // num+1; // there is no assignment
-    // // num=num+1;
-    // num++; // num=num+1
-    // // console.log(num);
-    // document.write("<h1>"+num+"</h1>")
+        // var num=10;
+        // // num+1; // there is no assignment
+        // // num=num+1;
+        // num++; // num=num+1
+        // // console.log(num);
+        // document.write("<h1>"+num+"</h1>")
 
-    // pre-fix and post-fix
+        // pre-fix and post-fix
 
-    //post-fix
-    // var num2=10;
-    // var num3=num2++;
-    // document.write("<h1>"+num3+"</h1>"); 
+        //post-fix
+        // var num2=10;
+        // var num3=num2++;
+        // document.write("<h1>"+num3+"</h1>"); 
 
-    //pre-fix
-    // var num2=10;
-    // var num3=++num2;
-    // document.write("<h1>"+num3+"</h1>"); 
+        //pre-fix
+        // var num2=10;
+        // var num3=++num2;
+        // document.write("<h1>"+num3+"</h1>"); 
 
-    // var num3=10;
-    // // num3++++
-    // num3++
-    // num3++
-    // document.write("<h1>"+num3+"</h1>"); 
+        // var num3=10;
+        // // num3++++
+        // num3++
+        // num3++
+        // document.write("<h1>"+num3+"</h1>"); 
 
-    // 2.Binary operator
-        
+        // 2.Binary operator
+
         // 1.arithmetic operator eg. +,-,*,/,%,**
-        
+
         // document.write("<h1>"+(5+7)+"</h1>"); 
         // document.write("<h1>"+(15-7)+"</h1>"); 
         // document.write("<h1>"+(5*7)+"</h1>"); 
@@ -63,10 +63,10 @@
         // document.write("<h1>"+( 20 >= 20 )+"</h1>"); 
         // document.write("<h1>"+( 10 == 20 )+"</h1>"); 
         // document.write("<h1>"+( 10 == 10 )+"</h1>");  
-// document.write("<h1>"+( 10 === 10 )+"</h1>");  
-// document.write("<h1>"+( 10 == '10' )+"</h1>");  
-// document.write("<h1>"+( 10 === '10' )+"</h1>");  
-// document.write("<h1>"+( '10' === '10' )+"</h1>");  
+        // document.write("<h1>"+( 10 === 10 )+"</h1>");  
+        // document.write("<h1>"+( 10 == '10' )+"</h1>");  
+        // document.write("<h1>"+( 10 === '10' )+"</h1>");  
+        // document.write("<h1>"+( '10' === '10' )+"</h1>");  
         // = //assignment
         // == for comparison
         // === checks value and data type also
@@ -83,10 +83,10 @@
 
         // if (marks>=80 || marks<=100) 
         //     document.write("<h1>A grade</h1>"); 
-               
+
         // if (marks>=80 && marks<=100) 
         //     document.write("<h1>A grade</h1>"); 
-               
+
         // document.write("<h1>"+(!(10>20))+"</h1>"); 
         // document.write("<h1>"+(
         //     (10>20) && (30<50) && (56>9)
@@ -106,16 +106,72 @@
 
         //5. bitwise operator eg. &,|,~,^(XOR)
 
-        // 97 -> binary ?
+        // 97 -> binary 
+        // var num1=97; // 01100001
+        // var num2=23; // 00010111
+        // num1 & num2  00000001  => 1*2^0 => 1
+
+        // document.write("<h1>"+( (97).toString(2) )+"</h1>"); 
+        // document.write("<h1>"+( (23).toString(2) )+"</h1>"); 
+        // document.write("<h1> 97&23 ="+( 97&23 )+"</h1>"); 
+
+        // var num1=97; // 01100001
+        // var num2=23; // 00010111
+        // // num1 | num2  01110111  => 64+32+16+4+2+1
+        // document.write("<h1> 97|23 ="+( 97|23 )+"</h1>"); 
 
 
+        // var num1=97; // 01100001
+        // var num2=23; // 00010111
+        // // num1 ^ num2  01110110  =>
+        // // Xor says that if i got same bit then i will give 0 otherwise 1
+        // document.write("<h1> 97^23 ="+( 97^23 )+"</h1>"); 
 
+        // document.write("<h1> ~10 ="+( ~10 )+"</h1>"); 
+        // document.write("<h1> ~10 ="+( ~-10 )+"</h1>");
 
-    
+        //Left shift (<<)
+        // var num2=23; // 00010111 -> 00101110 -> 46
+        // document.write("<h1> num2<<1 ="+( num2<<1 )+"</h1>"); 
+        // document.write("<h1> num2<<2 ="+( num2<<2 )+"</h1>"); 
+        // document.write("<h1> num2<<3 ="+( num2<<3 )+"</h1>"); 
+        // document.write("<h1> num2<<4 ="+( num2<<4 )+"</h1>"); 
+
+        // 23 << 1 = 23 * 2 
+        // 23 << 2 = 23 * 2 * 2 
+        // 23 << 3 = 23 * 2 * 2 * 2 
+        // 23 << 4 = 23 * 2 * 2 * 2 * 2
+
+        //Right shift (>>)
+        // var num2=368; // 101110000 => num2 >> 1 => 010111000
+
+        // document.write("<h1> 128 ="+( (num2).toString(2) )+"</h1>"); 
+        // document.write("<h1> num2>>1 ="+( num2>>1 )+"</h1>"); 
+        // document.write("<h1> num2>>2 ="+( num2>>2 )+"</h1>"); 
+        // document.write("<h1> num2>>3 ="+( num2>>3 )+"</h1>"); 
+        // document.write("<h1> num2>>4 ="+( num2>>4 )+"</h1>"); 
+
+        // 368 << 1 = 368 / 2 
+        // 368 << 2 = 368 / 2 / 2 
+        // 368 << 3 = 368 / 2 / 2 / 2 
+        // 368 << 4 = 368 / 2 / 2 / 2 / 2
+
+        // 3. Ternary operator (conditional operator)
+
+        // syntax :  (condition) ? if true : if false
+
+        // var num=10,num2=20,max;
+        var num, num2, max;
+        num = prompt("enter number 1:");
+        num2 = prompt("enter number 2:");
+        max = num > num2 ? num : num2;
+        document.write("<h1> max:" + max + "</h1>");
+
+        document.write("<h1> " + typeof num + "</h1>");
 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>
