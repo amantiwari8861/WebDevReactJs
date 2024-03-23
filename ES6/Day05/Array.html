@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 1D array 
+    //in js array is heterogeneous collection of data
+    // let fruits=["apple","mango",10,20.5,true,'banana',"etc"];
+
+    // console.log("The fruits array length is :"+fruits.length);
+    // for (let i = 0; i < fruits.length; i++) 
+    // {
+    //     const fruit = fruits[i];
+    //     console.log(fruit);
+    // }
+
+        // for (const fruit of fruits) // const is more secure than let
+        // {
+        //     console.log(fruit);
+        // }
+        // for (const i in fruits) 
+        // {
+        //     console.log("at pos "+i+" the value is "+fruits[i]);
+        // }
+        // for (const i = 0; i < fruits.length;i++) //error
+        // {
+        //     console.log(i);
+        // }
+        // const is not changing the original value of the element but it can change it's own variable value again and again 
+
+        // 2D Array 
+        let countries=["india","australia"];
+        let states=[
+            ["Delhi","Goa","UP"],
+        ["sydney","south wales"]
+    ];
+
+        for (let i=0;i<countries.length;i++) 
+        {
+            document.write("<h1>"+countries[i]+":</h1>");
+            for (let j=0;j<states[i].length;j++) 
+            {
+                document.write("<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+states[i][j]+"</h1>");
+            }
+        }
+
+        // console.log(states[0][0]);
+        // console.log(states[0][1]);
+        // console.log(states[0].length);
+        // console.log(states[1].length);
+        console.table(states)
+
+
+</script>
+AMan                 Tiwari
+<pre>Aman                 Tiwari</pre>
+AMan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiwari
+</body>
+</html>
