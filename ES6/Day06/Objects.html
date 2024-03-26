@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // let fruits=[];// in js array is dynamic
+            let fruits=new Array();// new -> dynamic memory allocation and Array() is constructor
+
+            fruits.push("apple");
+            fruits.push("apple 1");
+            fruits.push("apple 2");
+            fruits.push("apple 3");
+            fruits.push("chiku");
+            fruits.push("banana");
+            fruits.push("strawberry");
+            // for (let i = 0; ; i++) 
+            // {
+            //     let fruit=prompt("enter "+i+" fruit:");
+            //     if (fruit==-1) {
+            //         break;
+            //     }
+            //     fruits.push(fruit);
+            // }
+
+            // fruits.pop();//strawberry
+            // fruits.pop();//chiku
+            // console.log(fruits);
+
+            // fruits.push("apple");
+            // fruits.unshift("mango");
+            // console.log(fruits);// O(n)
+
+            // fruits.concat(["papaya","pomegranate"]);//the original vale of array is not changing (immutable)  
+            // console.log(fruits.concat(["papaya","pomegranate"]));//the original vale of array is not changing (immutable)  
+            // console.log(fruits);
+            
+            //here concat is returning the new array in which the change is happened
+            // let basket=fruits.concat(["papaya","pomegranate"]);
+            // console.log(basket);
+            // fruits=fruits.concat(["papaya","pomegranate"]);//re-initialization (in which we are deleting old array and assigning new array )
+            // fruits.push(["papaya","pomegranate"]);
+            // console.log(fruits);
+            // let i=0;
+            // fruits.forEach(printFruit); //send values one by one in printFruit function
+            // function printFruit(fruit) 
+            // {
+            //     i++;
+            //     setTimeout(()=>{
+            //         console.log(fruit);
+            //     },i*1000)// 1000 ms  ->  2000 ms -> 3000 ms
+            // }
+            function changeCase(fruit) 
+            {
+                return fruit.toUpperCase();//here apple is string and toUpperCase() is a function(method)
+            }
+           let newFruits=fruits.map(changeCase);
+            console.log(newFruits);
+        </script>
+</body>
+</html>
