@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-        <script>
-            // let fruits=[];// in js array is dynamic
-            let fruits=new Array();// new -> dynamic memory allocation and Array() is constructor
+    <script>
+        // let fruits=[];// in js array is dynamic
+        let fruits = new Array();// new -> dynamic memory allocation and Array() is constructor
 
-            fruits.push("apple");
-            fruits.push("apple 1");
-            fruits.push("apple 2");
-            fruits.push("apple 3");
-            fruits.push("chiku");
-            fruits.push("banana");
-            fruits.push("strawberry");
-            // for (let i = 0; ; i++) 
-            // {
-            //     let fruit=prompt("enter "+i+" fruit:");
-            //     if (fruit==-1) {
-            //         break;
-            //     }
-            //     fruits.push(fruit);
-            // }
+        fruits.push("apple");
+        fruits.push("apple 1");
+        fruits.push("apple 2");
+        fruits.push("apple 3");
+        fruits.push("chiku");
+        fruits.push("banana");
+        fruits.push("strawberry");
+        // for (let i = 0; ; i++) 
+        // {
+        //     let fruit=prompt("enter "+i+" fruit:");
+        //     if (fruit==-1) {
+        //         break;
+        //     }
+        //     fruits.push(fruit);
+        // }
 
-            // fruits.pop();//strawberry
-            // fruits.pop();//chiku
-            // console.log(fruits);
+        // fruits.pop();//strawberry
+        // fruits.pop();//chiku
+        // console.log(fruits);
 
-            // fruits.push("apple");
-            // fruits.unshift("mango");
-            // console.log(fruits);// O(n)
+        // fruits.push("apple");
+        // fruits.unshift("mango");
+        // console.log(fruits);// O(n)
 
-            // fruits.concat(["papaya","pomegranate"]);//the original vale of array is not changing (immutable)  
-            // console.log(fruits.concat(["papaya","pomegranate"]));//the original vale of array is not changing (immutable)  
-            // console.log(fruits);
-            
-            //here concat is returning the new array in which the change is happened
-            // let basket=fruits.concat(["papaya","pomegranate"]);
-            // console.log(basket);
-            // fruits=fruits.concat(["papaya","pomegranate"]);//re-initialization (in which we are deleting old array and assigning new array )
-            // fruits.push(["papaya","pomegranate"]);
-            // console.log(fruits);
-            // let i=0;
-            // fruits.forEach(printFruit); //send values one by one in printFruit function
-            // function printFruit(fruit) 
-            // {
-            //     i++;
-            //     setTimeout(()=>{
-            //         console.log(fruit);
-            //     },i*1000)// 1000 ms  ->  2000 ms -> 3000 ms
-            // }
-            function changeCase(fruit) 
-            {
-                return fruit.toUpperCase();//here apple is string and toUpperCase() is a function(method)
-            }
-           let newFruits=fruits.map(changeCase);
-            console.log(newFruits);
-        </script>
+        // fruits.concat(["papaya","pomegranate"]);//the original vale of array is not changing (immutable)  
+        // console.log(fruits.concat(["papaya","pomegranate"]));//the original vale of array is not changing (immutable)  
+        // console.log(fruits);
+
+        //here concat is returning the new array in which the change is happened
+        // let basket=fruits.concat(["papaya","pomegranate"]);
+        // console.log(basket);
+        // fruits=fruits.concat(["papaya","pomegranate"]);//re-initialization (in which we are deleting old array and assigning new array )
+        // fruits.push(["papaya","pomegranate"]);
+        console.log(fruits);
+        // let i=0;
+        // fruits.forEach(printFruit); //send values one by one in printFruit function
+        // function printFruit(fruit) 
+        // {
+        //     i++;
+        //     setTimeout(()=>{
+        //         console.log(fruit);
+        //     },i*1000)// 1000 ms  ->  2000 ms -> 3000 ms
+        // }
+        // function changeCase(fruit) {
+        //     return fruit.toUpperCase();//here apple is string and toUpperCase() is a function(method)
+        // }
+        // let newFruits = fruits.map(changeCase);
+        // console.log(newFruits);
+
+        // console.log(fruits.map(fruit=>fruit.toUpperCase()));
+        // console.log(fruits.filter(fruit=>fruit.startsWith("a")));
+        // console.log(fruits.map(fruit=>fruit.startsWith("a")));
+        // const numbers = [1, 2, 3, 4];
+        // const doubledAndSquared = numbers.flatMap(num => [num * 2, num ** 2]);
+        // console.log(doubledAndSquared); // [2, 1,      4, 4,      6, 9,        8, 16]
+
+        // console.log(fruits.join(" - "));
+        // console.log(fruits.slice(2,5));// here 2 is inclusive and 5 is exclusive
+        // let newArr=fruits.splice(2,3);
+        // console.log(fruits);
+        // console.log(newArr);
+        let newOne=fruits.reduce((pv,cv)=>
+        {
+            console.log("Previous:"+pv+"   current:"+cv);
+            return cv;
+        });
+
+        // console.log(newOne);
+        console.log(fruits);
+        
+
+    </script>
 </body>
+
 </html>
