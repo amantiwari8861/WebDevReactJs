@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Rest
+        // function myDetails(name="Shivam",...otherDetails) //rest -> bacha hua
+        // {
+        //     console.log("My Name is :"+name);
+        //     console.log(otherDetails);            
+        // }
+        // myDetails();
+        // myDetails("Aman Tiwari","Male","9891062743","Xyz");
+
+        //Array destructuring 
+        let [fname,lname,...etc]=["aman","tiwari","9891062743","hii","etc"]
+
+        console.log(fname);
+        console.log(lname);
+        console.log(etc);
+        //Spread -> alag ho jana
+        console.log(..."Aman");
+        console.log(...["Hello","Hii","byee"]);
+        console.log([..."Aman"]);
+
+
+
+    </script>
+</head>
+<body>
+    
+    
+
+
+
+</body>
+</html>

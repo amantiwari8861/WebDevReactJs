@@ -1,0 +1,45 @@
+[
+    {
+        "fname": "Aman",
+        "lname": "Tiwari",
+        "address": {
+            "city": "Noida sector-62",
+            "pincode": 201301
+        },
+        "salary": 85000.677,
+        "gender": "M",
+        "isMarried": true,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python",
+            "MERN",
+            "MEAN",
+            "JAVA FULLSTACK",
+            "ETC"
+        ],
+        "1": "hiii"
+    },
+    {
+        "fname": "Shivam",
+        "lname": "Tyagi",
+        "address": {
+            "city": "Noida sector-128",
+            "pincode": 201304
+        },
+        "salary": 85000.677,
+        "gender": "M",
+        "isMarried": true,
+        "skills": [
+            "C",
+            "C++",
+            "Java",
+            "Python",
+            "MERN",
+            "MEAN",
+            "JAVA FULLSTACK",
+            "ETC"
+        ]
+    }
+]
