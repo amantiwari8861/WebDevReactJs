@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // let additionFxn = function add(n1, n2) {  //normal function
+        //     return n1 + n2;
+        // }
+        // let additionFxn = function(n1, n2) { //anonymous function
+        //     return n1 + n2;
+        // }
+        // let additionFxn = (n1, n2) => { //arrow function
+        //     return n1 + n2;
+        // }
+        // let additionFxn = (n1, n2) => n1 + n2 ;
+        // let additionFxn = (n1, n2) => {console.log("hii");console.log("hello");};
+        // let additionFxn = (n1, n2) => {
+        //     console.log("hii");
+        //     console.log("hello");
+        //     return n1+n2;
+        // };
+        // let a= (n1,n2)=> console.log("hiiii");
+        // let a= (n1,n2)=> "hiiii";
+
+        function filterByName(fruit) 
+        {
+            return fruit.startsWith("a");
+        }
+        let result=["apple","mango","chiku","avacardo"].filter(filterByName)
+        console.log(result);
+
+
+        console.log(["apple","mango","chiku","avacardo"].filter(fruit=>fruit.startsWith("a")));
+
+
+        setTimeout(() => {
+            console.log("Hello Aman Sir after 3s.");
+        }, 3000);
+
+
+        // console.log(add(10, 20));
+        // console.log(additionFxn(10, 20));
+        // console.log(a());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
