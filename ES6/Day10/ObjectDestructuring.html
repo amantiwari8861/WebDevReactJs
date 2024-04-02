@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let userDetails = {
+            "fname": "Aman",
+            "lname": "Tiwari",
+            "city": "Noida sector-62",
+            pincode: 201301,
+            salary: 85000.677,
+            gender: 'M',
+            isMarried: true,
+            skills: ["C", "C++", "Java", "Python", "MERN", "MEAN", "JAVA FULLSTACK", "ETC"],
+            1: "hiii"
+        }
+        // console.log(userDetails.fname);
+        // let {gender,lname}=userDetails;
+        // console.log(gender);
+        // console.log(lname);
+
+        // let {gender:usergender,lname:lastname}=userDetails;
+        // console.log(usergender);
+        // console.log(lastname);
+
+        // function printDetails({fname,gender}) {
+        //     return `Gender:${gender}  firstName:${fname}`;
+        // }
+        // console.log(printDetails(userDetails));
+
+        //Rest
+        // function printDetails({ fname, gender, ...otherDetails }) {
+        //     return `Gender:${gender}  firstName:${fname} otherdetails:${JSON.stringify(otherDetails)}`;
+        // }
+        // console.log(printDetails(userDetails));
+
+        //handle less value
+        // function printDetails({ fname, gender, otherDetails}) {
+        //     function printDetails({ fname, gender, otherDetails ={}}) {
+        //     return `Gender:${gender}  firstName:${fname} otherdetails:${otherDetails}`;
+        // }
+        // console.log(printDetails({"fname": "Aman","gender": "M"}));
+        console.log(printDetails());
+
+        //swapping 2 values uding objects
+        // let a = 10, b = 20;
+        // ({ a, b } = { "b": a, "a": b })
+        // console.log(a);
+        // console.log(b);
+
+
+    </script>
+</body>
+
+</html>

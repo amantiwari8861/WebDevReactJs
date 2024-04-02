@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // let fruits=["mango","grapes","etc","chicku"];
+        // console.log(fruits[0]);
+        // console.log(fruits[1]);
+        
+        // console.log("---------New Way(ES6)------------");
+        // let [one,two]=["mango","grapes","etc","chicku"]; //Array Destructuring
+        // console.log(one);
+        // console.log(two);
+
+        // let fruits=["mango","grapes","etc","chicku"];
+        // let [one,two]=fruits; //Array Destructuring
+        // console.log(one);
+        // console.log(two);
+
+        //using rest to destructure array
+        // let [one,two,...others]=["mango","grapes","chicku","papaya","pear","etc"]; //Array Destructuring
+        // console.log(one);
+        // console.log(two);
+        // console.log(others);
+
+        // let f1,f2;
+        // [f1,f2]=["mango","grapes","chicku","papaya","pear","etc"];
+        // console.log(f1);
+        // console.log(f2);
+
+        // let f1,f2;
+        // [f1,,,f2]=["mango","grapes","chicku","papaya","pear","etc"];
+        // console.log(f1);
+        // console.log(f2);
+
+        //using array destructuring in fxn
+
+//         function printDetail([fname,lname,...others]) 
+//         {
+//         return `First Name:"${fname}" \\ \nLast name:${lname}  \nother details:\t\t '${others}'`;
+//         }
+
+
+//         console.log(
+// printDetail(["Aman","Tiwari","9891062743","Male","28","etc"])
+//             );
+
+    // function printDetail(fname,lname,...others) 
+    // {
+    //     return `First Name:"${fname}" Last name:${lname}  other details:${others}`;
+    // }
+
+    //spread operator
+    // console.log
+    // (
+    //     printDetail(...["Aman","Tiwari","9891062743","Male","28","etc"])
+    // );
+
+    // console.log(...["Aman","Tiwari","9891062743","Male","28","etc"]);
+
+    // console.log([..."Aman"]);
+
+    //nested array destructuring
+    // function printDetail([fname,lname,[others]]) 
+    function printDetail([fname,lname,...[others]]) 
+    {
+        return `First Name:"${fname}" Last name:${lname}  other details:${others}`;
+    }
+    console.log
+    (
+        printDetail(["Aman","Tiwari",["Male","28","noida","india"]])
+    );
+
+    </script>
+
+</body>
+</html>
