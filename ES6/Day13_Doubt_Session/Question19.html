@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+        .container{
+            margin: auto;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            height: 60vh;
+            width: 1000px;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+        }
+        .box1,.box2{
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function calculate() 
+        {
+            let amount,surcharge,msg='',unit;
+            unit=Number(document.getElementById("unit").value);
+            if (unit=='' || unit==null) 
+                return
+            
+            if (unit>=0 && unit<200) 
+            {
+                amount=unit*3.20;   
+            }
+            else if(unit>=200 && unit<400)
+            {
+                amount=unit*5.50;
+            }
+            else if(unit>=400 && unit<600)
+            {
+                amount=unit*8.80;
+            }
+            else if(unit>=600)
+            {
+                amount=unit*9.0;
+            }
+            else
+            {
+                msg="Invalid unit!!";
+                document.getElementById("result").innerHTML=msg;
+                return;
+            }
+
+            if (amount>1000) 
+            {
+                surcharge=amount*15/100;
+                amount+=surcharge;
+                msg="Surcharge Added @ 15%  : "+surcharge+"<br>";
+            }
+            if (amount<200) {
+                amount=200;
+                msg="the minimum amount must be 200<br>";
+            }
+
+            msg+="The Net Amount is :"+amount;
+            document.getElementById("result").innerHTML=msg;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- <pre>
+        19. Write a program in javascript to calculate and print the Electricity bill of a given customer. 
+        The customer id, customer name and unit consumed by the user should be taken from the keyboard
+        and display the total amount to pay to the customer. The charge are as follow : 
+
+        Unit	                                Charge/unit
+        upto 199	                            @3.20
+        200 and above but less than 400	        @5.50
+        400 and above but less than 600	        @8.80
+        600 and above	                        @9.00
+        If bill exceeds Rs.1000 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 200/-
+
+        Test Data :
+        1001
+        800
+        Expected Output :
+        Customer ID NO :1001
+        unit Consumed :800
+        Amount Charges @Rs. 2.00 per unit : 1600.00
+        Surchage Amount : 240.00
+        Net Amount Paid By the Customer : 1840.00
+    </pre> -->
+
+    <h1 id="result" style="color: red;"></h1>
+    <div class="container">
+            <div class="box1"><label for="id">User Id:</label></div>
+            <div class="box2"><input type="text" id="id"> </div>
+            <div class="box1"><label for="name">Name:</label></div>
+            <div class="box2"><input type="text" id="name"></div>
+            <div class="box1">
+                <label for="unit">Unit Consumed:</label>
+            </div>
+            <div class="box2"><input type="number" id="unit"></div>
+            <div class="btn">
+                <input type="button" value="calculate" onclick="calculate()">
+            </div>
+    </div>
+
+</body>
+
+</html>

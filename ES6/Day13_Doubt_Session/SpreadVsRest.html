@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let arr=[10,20,30,40];
+        // let arr=["hii","hello"]
+        // console.log(arr);
+        // console.log(...arr);
+        // let arr2=[...arr];
+        // document.write(arr)
+        // document.write(..."Hello")
+        // console.log(..."Hello");
+        // console.log(typeof Number("1"));
+        // document.write(...arr);
+        // console.log(...arr);
+        // document.write(10);
+
+        // function sumOfN(num1,...args) 
+        // {
+        //     return "num1:"+num1+"  args:"+args;
+        // }
+        function sumOfN() {
+            // return arguments;
+            let sum=0;
+            for(let i=0;i<arguments.length;i++)
+            {
+                sum=sum+arguments[i];
+            }
+            return sum;
+        }
+
+        console.log(sumOfN(10));
+        console.log(sumOfN(10,20));
+        console.log(sumOfN(10,20,30));
+        console.log(sumOfN(10,20,30,40));
+
+
+    </script>
+
+</body>
+</html>

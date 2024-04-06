@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+<script>
+    // let employee={
+    //     empid:100,
+    //     empname:"Aman",
+    //     empsalary:60000,
+    //     address:{
+    //         city:"delhi",
+    //         pincode:110096,
+    //         country:"india"
+    //     }
+    // }
+
+    // console.log(employee["address"]["city"]); //Delhi
+    
+    // let {empname,empsalary:salary} =employee;
+    // console.log(empname);//Aman
+    // // console.log(empsalary);
+    // console.log(salary);
+
+    // let {empname,...otherDetails}=employee;
+    // let {empname,...otherDetails,xyz}=employee;
+    // console.log(otherDetails);
+
+    let employees=[
+    {empid:100,empname:"Aman",empsalary:60000,address:{city:"delhi",pincode:110096,country:"india"}},
+    {empid:101,empname:"Siddharth",empsalary:50000,address:{city:"noida",pincode:201301,country:"india"}},
+    {empid:102,empname:"Priya",empsalary:40000,address:{city:"up",pincode:110096,country:"india"}},
+    {empid:103,empname:"Atul",empsalary:200000,address:{city:"pune",pincode:110096,country:"india"}},
+    ]
+
+    // let filteredEmployees=employees.filter(emp=>emp.empsalary>40000;)// single statement doesn't required ; 
+    // let filteredEmployees=employees.filter(emp=>emp.empsalary>40000)// will it mutate the original array ?
+    // let newEmpData=employees.map(emp=>emp.empsalary+=emp.empsalary*0.15);
+    // let newEmpData=employees.map(emp=>{
+    //     return emp.empsalary+=emp.empsalary*0.15
+    // });
+    // let newEmpData=employees.map(emp=>{ emp.empsalary+=emp.empsalary*0.15;  return emp;   });
+    //  console.log(employees);
+    //  console.log(newEmpData);
+    // console.log(filteredEmployees);
+    
+    // function incSalary(employee) 
+    // {
+    //     // console.log(employee);
+    //     employee.empsalary+=employee.empsalary*0.15
+    //     return employee;
+    // }
+    // let newEmpData=employees.map(incSalary);
+
+    // console.log(newEmpData);
+    // console.log(employees);
+
+    // shallow copy(call by reference)(objects and arrays) and 
+    // deep copy(call by value )(all primitive data types)
+
+    let salesEmployee={empid:100,empname:"Rishit",empsalary:2000,address:{city:"Delhi NCR",pincode:110096,country:"india"}};
+    // // let totalEmployees=[employees,salesEmployee];
+    // let totalEmployees=[...employees,salesEmployee];
+    // console.log(totalEmployees);
+    // console.log(employees);
+
+    // let {empname,address:{city}}=salesEmployee;
+    // console.log(empname);
+    // console.log(city);
+
+    // let details=["NIIT technologies",salesEmployee];
+    // console.log(details);
+    // let [userDetails]=details; // ? 
+    // let [udetail,otherdetail]=details;
+
+    // console.log(userDetails);
+    // console.log(udetail);
+    // console.log(otherdetail);
+
+    function getOwnerName(name="Aman") //default parameter
+    {
+        return `${name} is the owner`;
+    }
+    console.log(getOwnerName("Sid"));
+    console.log(getOwnerName());
+
+
+
+</script>
+
+</body>
+</html>
