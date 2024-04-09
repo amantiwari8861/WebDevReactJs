@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h1{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        .colr{
+            background-color: greenyellow;
+        }
+        .btnDiv{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 class="colr xyz">Helllo there my name is aman</h1> -->
+    <h1 class="colr">Helllo there my name is aman</h1>
+    <div class="btnDiv">
+        <button onclick="toggle()">Toggle</button>
+    </div>
+
+<script>
+    let isVisible=false;
+    function toggle() 
+    {
+        let h1=document.querySelector("h1");
+        if (!isVisible) 
+        {
+            // console.log("not visible");
+            // h1.style.display="block";
+            // console.log(h1.getAttribute("class"));
+            // console.log(h1.classList);
+            h1.classList.add("show");
+            // h1.classList.remove("colr")
+            // console.log(h1.classList);
+            // h1.setAttribute("align","center");
+            // isVisible=true;
+            // console.log(getComputedStyle(h1));
+            let styles=getComputedStyle(h1);
+            console.log(styles.getPropertyValue("background-color"));
+            console.log(styles.backgroundColor);
+        }
+        else
+        {
+            isVisible=false;
+            h1.classList.remove("show")
+        }
+    };
+</script>
+
+</body>
+</html>
