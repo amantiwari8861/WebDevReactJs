@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" onkeyup="changeStyle()" id="myinp"> -->
+    <!-- <input type="text" onkeyup="changeStyle(this)" id="myinp"> -->
+    <input type="text" onkeyup="changeStyle(this)" id="myinp">
+
+    <script>
+        function changeStyle(event) 
+        {
+            // let myinput=document.querySelector("#myinp");
+            console.log(event);
+
+            event.style.outline="none";
+            event.style.outline="none"
+            event.style.border="1px solid red";
+            event.style.borderRadius="3px";
+        }
+
+    </script>
+</body>
+</html>

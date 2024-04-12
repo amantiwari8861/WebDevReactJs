@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp" >
+
+    <h1 id="result"></h1>
+
+    <script>
+        let input=document.querySelector("#inp");
+        // input.addEventListener("keypress",()=>{
+        //     console.log("u pressed(keypress) :"+input.value);
+        //     document.getElementById("result").innerHTML="u pressed :"+input.value;
+        // })
+        // input.addEventListener("keydown",()=>{
+        //     console.log("u pressed(keydown) :"+input.value);
+        //     document.getElementById("result").innerHTML="u pressed :"+input.value;
+        // })
+        // input.addEventListener("keyup",()=>{
+        //     console.log("u pressed(keydown) :"+input.value);
+        //     document.getElementById("result").innerHTML="u pressed :"+input.value;
+        // })
+        // input.addEventListener("change",()=>{
+        //     console.log("u pressed(change) :"+input.value);
+        //     document.getElementById("result").innerHTML="u pressed :"+input.value;
+        // })
+        // input.addEventListener("focus",()=>{
+        //     // alert("u clicked in input box");
+        //     input.style.outline="2px solid green";
+        // });
+
+        /*
+            The keydown event is fired when any key is pressed, regardless of whether it produces a character value. This includes keys such as the shift key, the control key, and the arrow keys. The keypress event, on the other hand, is only fired when a key that produces a character value is pressed. This includes keys such as the alphabetic keys, the numeric keys, and the punctuation keys.
+Another difference between the keydown and keypress events is that the keydown event is fired before the keypress event. This means that you can use the keydown event to prevent the keypress event from being fired. For example, you could use this to prevent the user from entering a certain character into a text field.
+
+        */
+    </script>
+    
+</body>
+</html>

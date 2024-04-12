@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" autocomplete="off">
+    <input id="textBox" type="text"  />
+    </form>
+    <div id="output"></div>
+
+    <script>
+
+        const textBox = document.querySelector("#textBox");
+        const output = document.querySelector("#output");
+        textBox.addEventListener("keydown", (event) => {
+            event.preventDefault();
+            let keyPressed = event.key;
+            console.log(keyPressed);
+            let isCtrlPressed = event.ctrlKey;
+            console.log(isCtrlPressed);
+            let isShiftPressed = event.shiftKey;
+            let isAltPressed = event.altKey;
+
+            if (isCtrlPressed && isShiftPressed && isAltPressed && keyPressed !== 'Control' && keyPressed !== 'Shift' && keyPressed !== 'Alt') 
+            {
+                output.textContent = `You pressed: Ctrl + Shift + Alt + ${keyPressed}`;
+            } 
+            else if (isCtrlPressed && isShiftPressed && keyPressed !== 'Control' && keyPressed !== 'Shift') 
+            {
+                output.textContent = `You pressed: Ctrl + Shift + ${keyPressed}`;
+            } 
+            else if (isCtrlPressed && isAltPressed && keyPressed !== 'Control' && keyPressed !== 'Alt') {
+                output.textContent = `You pressed: Ctrl + Alt + ${keyPressed}`;
+            } else if (isShiftPressed && isAltPressed && keyPressed !== 'Shift' && keyPressed !== 'Alt') {
+                output.textContent = `You pressed: Shift + Alt + ${keyPressed}`;
+            } else if (isCtrlPressed && keyPressed !== 'Control') {
+                output.textContent = `You pressed: Ctrl + ${keyPressed}`;
+            } else if (isShiftPressed && keyPressed !== 'Shift') {
+                output.textContent = `You pressed: Shift + ${keyPressed}`;
+            } else if (isAltPressed && keyPressed !== 'Alt') {
+                output.textContent = `You pressed: Alt + ${keyPressed}`;
+            } else {
+                output.textContent = `You pressed: ${keyPressed}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
