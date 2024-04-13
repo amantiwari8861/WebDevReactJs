@@ -1,8 +1,6 @@
-string and array new methods
+localStorage and sessionStorage
 Object.entries()
 Map & Set
-??(nullish coalescing) ||(logical or)
-localStorage and sessionStorage
 Class(Template)
 Modules
 Asyncronous programming

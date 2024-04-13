@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello aman</h1>
+    <input type="text" id="inputbtn">
+
+    <script>
+        let inputbtn=document.querySelector("#inputbtn");
+        inputbtn.addEventListener("keyup",(e)=>
+        {
+            console.log(e);
+        })
+        document.querySelector("h1").addEventListener("mouseover",(e)=>{
+            console.log(e);
+            let h1Obj=e.target;
+            h1Obj.style.color="red";
+            h1Obj.style.backgroundColor="greenyellow";
+        })
+        let h1=document.querySelector("h1");
+        h1.addEventListener("mouseout",(xyz)=>{
+            console.log(xyz);
+            let h1Obj=xyz.target;
+            h1Obj.style.color="unset";
+            h1Obj.style.backgroundColor="unset";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let num;
+        // let result=num || "default value";
+        // let result2=num ?? "default value";
+        // let num=null;
+        // let result=num || "default value";
+        // let result2=num ?? "default value";
+        // let num=0;
+        // let result=num || "default value";
+        // let result2=num ?? "default value";
+
+        // let num = -0;
+        // let result = num || "default value";
+        // let result2 = num ?? "default value";
+
+        // let num=0n;
+        // let result=num || "default value";
+        // let result2=num ?? "default value";
+
+        // let num=NaN;
+        // let result=num || "default value";
+        // let result2=num ?? "default value";
+
+        let num="";
+        let result=num || "default value";
+        let result2=num ?? "default value";
+
+        console.log(result);
+        console.log(result2);
+
+        // falsy value list: 0 ,-0,0n,null,undefined,NaN,"" empty string
+
+        // || logical or only can handle all falsy values like (0 ,-0,0n,null,undefined,NaN,"" empty string)
+
+        // ?? nullish coalseaking only can handle null and undefined
+
+        // function add(a,b) {
+        //     return (a??0)+(b??0);
+        // }
+        // console.log(add(10,20));
+        // console.log(add(10));
+        // console.log(add());
+        // console.log(add(null,null));
+    </script>
+</body>
+
+</html>
