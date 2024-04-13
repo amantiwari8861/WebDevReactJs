@@ -1,9 +1,11 @@
-Map & Set
+string and array new methods
 Object.entries()
+Map & Set
+??(nullish coalescing) ||(logical or)
+localStorage and sessionStorage
 Class(Template)
 Modules
 Asyncronous programming
-fetch api
-localStorage and sessionStorage
-?? |
-string and array new methods
+    callback promises,chaining
+    fetch api
+    async await
