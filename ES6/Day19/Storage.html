@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let obj={
+        //     name:"Aman",
+        //     age:28,
+        //     mobileNo:1242563,
+        //     address:{city:"noida","state":"up"},
+        //     xyz:null
+        // }
+        // localStorage.clear();
+        console.log(localStorage);
+        
+        // localStorage.setItem("name","Aman");
+        // localStorage.setItem("name",["Aman","naman"]);
+        // localStorage.setItem("name2","Ram");
+        // localStorage.removeItem("name");
+        // localStorage.setItem("xyz","Aman@5678$%^7@!");
+        // localStorage.setItem("userdetails",obj); //not properly comes
+        // localStorage.setItem("userdetails",JSON.stringify(obj));
+        // document.write(obj)
+
+        let users=[
+            {name:"Aman",age:28,mobileNo:1242563,address:{city:"noida","state":"up"},xyz:null},
+            {name:"Naman",age:28,mobileNo:1242563,address:{city:"noida","state":"up"},xyz:null},
+            {name:"Raman",age:28,mobileNo:1242563,address:{city:"noida","state":"up"},xyz:null},
+            {name:"xyz",age:28,mobileNo:1242563,address:{city:"noida","state":"up"},xyz:null},
+            {name:"abc",age:28,mobileNo:1242563,address:{city:"noida","state":"up"},xyz:null},
+    ]
+            // localStorage.setItem("users",JSON.stringify(users));
+            // sessionStorage.setItem("users",JSON.stringify(users))
+            // console.log(sessionStorage);
+            // console.log(document.cookie);
+            // let life=new Date("2024-04-15").toUTCString()
+            // document.cookie="name=Aman;expires="+life+";path=/";
+            // document.cookie="name2=Aman Tiwari@4$%%#!&*;expires="+life+";path=/";
+            // document.cookie="name2="+encodeURIComponent("Aman Tiwari@4$%%#!&*")+";expires="+life+";path=/";
+            document.cookie="name2="+encodeURIComponent("Aman Tiwari@4$%%#!&*")+";max-age="+30*60+";path=/";
+
+            // cookies is a small piece of information which is sent to the server 
+            // cookies recides in our browsers just like localStorage and sessionstorage
+
+        // console.log(localStorage.getItem("xyz"));
+        // console.log(localStorage.getItem("userdetails"));
+        // console.log(localStorage.getItem("users"));
+        // console.log(localStorage.key(1));
+        // let aadharcard=new Map();
+        // aadharcard.set("name","aman");
+        // aadharcard.set("name","Ram");
+        // aadharcard.set("name2","Ram 2.0");
+        // if key is same then old value will be overridden
+        // console.log(aadharcard);
+
+        // ["Manoj","Ram",21,9898]
+        // let 
+
+        // console.log();
+        //storage mechanism
+        //  authentication token
+
+
+    </script>
+
+
+</body>
+</html>
