@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class : class is a set of objects which shares a common structure and behaviour(blue print)
+        //every object has it's own unique identity
+        //object : real world entity
+        // class = attributes(data) + behaviour(function)
+        // class Building
+        // {
+        //     color="grey"; //data
+        //     lift()
+        //     {
+        //         console.log("our building has ");
+        //     }
+        // };
+        // class Building
+        // {
+        //     // color; //data
+        //     constructor()
+        //     {
+        //         console.log("hii i am default constructor");
+        //         this.color="white";
+        //         let rooms=55;
+        //         this.lift(rooms);
+        //     }
+        //     lift(rooms)
+        //     {
+        //         console.log("our building has "+this.color);
+        //         // console.log(rooms);
+        //         console.log(rooms);
+        //     }
+        // };
+        // let manojKiBuilding=new Building();
+        // manojKiBuilding.lift();
+        // console.log(manojKiBuilding.color);
+        // console.log(manojKiBuilding);
+
+
+        class Building
+        {
+            constructor(rooms,floors)
+            {
+                this.rooms=rooms;
+                this.floors=floors;
+            }
+            showdetails()
+            {
+                console.log("We have "+this.rooms+" Rooms.");
+                console.log("We have "+this.floors+" Floors.");
+            }
+        }
+
+        // let manojKiBuilding=new Building(50,5);
+        // manojKiBuilding.rooms=40;
+        // manojKiBuilding.showdetails();
+
+        // let shivamKiBuilding=new Building(100,10);
+        // shivamKiBuilding.showdetails();
+
+        class GovtBuilding extends Building
+        {
+            constructor(guards)
+            {
+                // super();//default constructor of parent
+                super(10,5);
+                this.guards=guards;
+            }
+            showdetails2()
+            {
+                super.showdetails()
+                console.log("we have "+this.guards+" guards");
+            }
+        }
+        let b1=new GovtBuilding(10);
+        // b1.showdetails();
+        b1.showdetails2();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            
+        let userDetails={
+            "fname":"Aman",
+            "lname":"Tiwari",
+            "address":{
+                "city":"Noida sector-62",
+                pincode:201301
+            },
+            salary:85000.677,
+            gender:'M',
+            isMarried:true,
+            skills:["C","C++","Java","Python","MERN","MEAN","JAVA FULLSTACK","ETC"],
+            1:"hiii"
+        }
+        // console.log(userDetails);
+        // let variable=Object.entries(userDetails);
+        // console.log(variable);
+        userDetails.fname="Atul";
+        let a={};
+        Object.assign(a,userDetails); //pass by reference
+        console.log(a);
+
+        
+
+
+        </script>
+</body>
+</html>

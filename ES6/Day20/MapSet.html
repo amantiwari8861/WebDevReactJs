@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // let fruits=new Set();
+    // fruits.add("apple");
+    // fruits.add("banana");
+    // fruits.add("apple");
+    // fruits.add("chiku");
+    // console.log(fruits);
+
+    let aadharCard=new Map();
+
+    aadharCard.set("name","Sid");
+    aadharCard.set("fathersname","xyz");
+    aadharCard.set("Age",21);
+    aadharCard.set("isMarried",true);
+    aadharCard.set("isMarried",false);
+
+    // console.log(aadharCard);
+
+    let allentries=aadharCard.entries();
+    // console.log(allentries);
+
+    for (const entry of allentries) 
+    {
+        // console.log(entry);
+        console.log(entry[0]+":"+entry[1]);
+    }
+
+</script>
+
+</body>
+</html>

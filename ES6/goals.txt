@@ -1,9 +1,6 @@
-localStorage and sessionStorage
-Object.entries()
-Map & Set
-Class(Template)
 Modules
+
 Asyncronous programming
-    callback promises,chaining
+    callback,promises,chaining
     fetch api
     async await
