@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+
+// import { data,a } from "./mylib.js";
+        // import { xyz } from "./mylib.js";
+        // import { Animal } from "./mylib.js";
+        // import  Animal  from "./mylib.js";
+        // import  {}  from "./mylib.js";
+        import * as mymodule from "./mylib.js";
+        // console.log("a="+a);
+        // console.log("data="+data);
+        // console.log(xyz);
+        console.log(mymodule);
+        console.log(mymodule.a);
+        console.log(mymodule.data);
+        console.log(new mymodule.Animal("hii"));
+        new mymodule.Animal("Tommy").printName();
+        // new Animal("Bolt").printName();
+        // let ani=new Animal("Bolt");
+        // ani.printName();
+    
+    </script>
+</body>
+</html>

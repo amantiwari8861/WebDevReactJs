@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+
+// for (let i = 0; i < 100000000000; i++) 
+        for (let i = 0; i < 10000000; i++) 
+        {
+           console.log(i);
+        }
+        let res=document.querySelector("#result");
+        res.innerHTML=("i ran 100000 times");
+        setTimeout(()=>{
+            res.innerHTML+=new Date()+"<br>";
+        },1000);
+        setTimeout(()=>{
+            res.innerHTML+=new Date()+"<br>";
+        },4000);
+        setTimeout(()=>{
+            res.innerHTML+=new Date()+"<br>";
+        },6000);
+        setTimeout(()=>{
+            res.innerHTML+=new Date()+"<br>";
+        },1000);
+    </script>
+</body>
+</html>

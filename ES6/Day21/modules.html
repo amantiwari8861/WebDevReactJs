@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module" src="mylib.js" ></script>
+    <script type="module">
+    //Modules : stdio.h -> library java.util.lang.*; import os        
+        import libraryData from './mylib.js'
+        // console.log(data);
+        // console.log(libraryData);
+        // console.log(libraryData(10,20));
+        let ani=new libraryData("Bolt");
+        ani.printName();
+
+</script>
+</body>
+</html>
