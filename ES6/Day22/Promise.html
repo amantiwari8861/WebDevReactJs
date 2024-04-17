@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let money = 1000000;
+        let makePromise = new Promise((resolve, reject) => {
+            if (money > 10000) {
+                resolve();
+            }
+            else {
+                reject();
+            }
+        })
+        makePromise
+            .then(() => { 
+                    console.log("gifting lamborgini"); 
+                    return true; 
+                }, 
+                () => { 
+                        console.log("i don't have enough money"); 
+                        return false; 
+                    }
+            )
+            .then((status) => {
+                console.log(status);
+                return "Aman Tiwari";
+            })
+            .then((name)=>{
+                console.log(name);
+            })
+    </script>
+</body>
+
+</html>
