@@ -33,24 +33,17 @@
             })
         };
 
-        taskScheduler(1000,()=>console.log("going institute"))
-        .then(()=>taskScheduler(2000,()=>teach("Java")))
-        .then(()=>taskScheduler(3000,()=>console.log("Having lunch")))
-        .then(()=>taskScheduler(4000,()=>teach("Angular")))
-        .then(()=>taskScheduler(5000,()=>teach("React")))
-        .then(()=>taskScheduler(15000,()=>teach("React Native")))
-        .then(()=>taskScheduler(6000,()=>console.log("Returning from institute")))
-        .catch((err)=>{
-            console.log("going to hospital for checkup ");
-            console.log(err);
-        })
-        .finally(()=>{
-            console.log("Sleeping at night");
-        });
-
-    
-    
-    
+        async function schedleDay() 
+        {
+            await taskScheduler(1000,()=>console.log("going institute"))
+            await taskScheduler(2000,()=>teach("Java"))
+            await taskScheduler(3000,()=>console.log("Having lunch"))
+            await taskScheduler(4000,()=>teach("Angular"))
+            await taskScheduler(5000,()=>teach("React"))
+            await taskScheduler(15000,()=>teach("React Native"))
+            await taskScheduler(6000,()=>console.log("Returning from institute"))            
+        }
+        schedleDay();
     </script>
 </body>
 </html>

@@ -1,6 +1,0 @@
-Modules
-
-Asyncronous programming
-    callback,promises,chaining
-    fetch api
-    async await
