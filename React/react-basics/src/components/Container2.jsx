@@ -1,7 +1,10 @@
+import Navbar from '../BootstrapComponents/Navbar'
 import products from './Products.json'
 
 const Container2 = () => {
   return (
+    <>
+    <Navbar/>
     <div id='mycontainer' style={{display:"flex",justifyContent:"space-around"}}>
       {/* {console.log(products)} */}
 
@@ -10,6 +13,7 @@ const Container2 = () => {
        })}
 
     </div>
+    </>
   )
 }
 export default Container2
