@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Aman Tiwari",
+        "image": "xyz",
+        "price": 5000
+    },
+    {
+        "id": 100,
+        "name": "Aman ",
+        "image": "xyz 2",
+        "price": 50000
+    },
+    {
+        "id": 2,
+        "name": "Aman Tiwari",
+        "image": "xyz",
+        "price": 5000
+    }
+]

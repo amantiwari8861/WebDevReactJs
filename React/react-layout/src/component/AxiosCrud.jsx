@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react"
 import Course from './Course'
+import axios from "axios";
+
 const ShowProductsWithUseEffect = () => {
-    let [productStock, setProductStock] = useState([{
-        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
-        "name": "Realme 11",
-        "price": 223332
-    }]);
+    let [productStock, setProductStock] = useState([{}]);
     let [total, setTotal] = useState(0);
     let [product, setProduct] = useState({});
-    // setTotal(productStock.length);
+    const URL = "http://localhost:5000/products";
 
     useEffect(() => {
-        setTotal(productStock.length);
-        console.log(productStock);
-    }, [productStock]);
+        axios.get(URL)
+        .then(res => 
+            {
+                setProductStock(res.data);
+                setTotal(res.data.length)
+            })
+        .catch(error =>console.log(error.message))
+    },[productStock]);
+
+
     const updateProduct = (e) => {
         const { name, value } = e.target;
         console.log(name + ":" + value);
@@ -28,6 +33,7 @@ const ShowProductsWithUseEffect = () => {
             ...productStock, product
         ])
     }
+
     return (
         <div className="container">
             <h1 className="text-center">we have {total} products</h1>
