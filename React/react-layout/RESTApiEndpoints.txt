@@ -1,0 +1,7 @@
+// REST -> REpresentation State Transfer 
+
+get    http://localhost:5000/products      no need to pass object     get all products
+get    http://localhost:5000/products/id   no need to pass object     get that specific product
+post   http://localhost:5000/products/     need to pass object        create a new product
+put    http://localhost:5000/products/id   need to pass object        update an existing product
+delete http://localhost:5000/products/id   no need to pass object     delete specific product

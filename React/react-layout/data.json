@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+      "name": "Redmi 45",
+      "price": 4700
+    },
+    {
+      "id": "3",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+      "name": "Realme 11",
+      "price": 223332
+    },
+    {
+      "id": "4",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+      "name": "LG 845",
+      "price": 78328732
+    },
+    {
+      "id": "6",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+      "name": "Spice 12T",
+      "price": 4700078
+    },
+    {
+      "id": "8",
+      "image": "https://react-bootstrap.netlify.app/img/logo.svg",
+      "name": "television",
+      "price": "150"
+    }
+  ]
+}
