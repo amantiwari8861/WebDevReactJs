@@ -18,7 +18,6 @@ const AxiosCrudComponent = () => {
         // console.log(showModal);
     }
 
-
     useEffect(() => {
         fetchData()
     }, []);
@@ -49,7 +48,6 @@ const AxiosCrudComponent = () => {
         try {
             await axios.put(URL+`/${product.id}`, product);
             fetchData();
-            setProductStock({ id: '', name: '', email: '' });
           } catch (error) {
             console.error('Error updating data:', error);
         }
@@ -95,3 +93,4 @@ const AxiosCrudComponent = () => {
 }
 export default AxiosCrudComponent
 
+//run json-server first using json-server --watch data.json --port=5000

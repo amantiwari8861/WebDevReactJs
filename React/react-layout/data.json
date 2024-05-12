@@ -25,10 +25,10 @@
       "price": 4700078
     },
     {
-      "id": "8",
+      "id": "12",
       "image": "https://react-bootstrap.netlify.app/img/logo.svg",
       "name": "television 2",
-      "price": "1507"
+      "price": "2000"
     }
   ]
 }

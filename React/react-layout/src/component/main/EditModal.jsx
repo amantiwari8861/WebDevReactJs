@@ -3,12 +3,13 @@ import { Modal } from "bootstrap";
 
 const EditModal = ({ method, product }) => {
     let modalRef = useRef(null);
-    const [editedProduct, setEditedProduct] = useState({ ...product });
+    const [editedProduct, setEditedProduct] = useState({...product});
 
     useEffect(() => {
-        const modal = new Modal(modalRef.current);
+        setEditedProduct({...product})
+        const modal = new Modal(modalRef.current,{backdrop:"static"});
         modal.show();
-    });
+    },[product]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -46,7 +47,7 @@ const EditModal = ({ method, product }) => {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" className="btn btn-primary" onClick={handleSave}>Save</button>
+                        <button type="button" className="btn btn-primary" onClick={handleSave} data-bs-dismiss="modal">Save</button>
                     </div>
                 </div>
             </div>
