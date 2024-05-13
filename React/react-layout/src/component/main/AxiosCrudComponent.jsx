@@ -31,12 +31,11 @@ const AxiosCrudComponent = () => {
         }
     };
     const addProduct = async (e) => {
-
-        e.preventDefault()
+        // e.preventDefault()
         try {
             await axios.post(URL,product);
             fetchData();
-            // setProduct({});
+            setProduct([{}]);
           } catch (error) {
             console.error('Error creating data:', error);
           }
@@ -72,23 +71,22 @@ const AxiosCrudComponent = () => {
         <div className="container">
             <h1 className="text-center">we have {total} products</h1>
             <div className="row row-cols-1 row-cols-md-6 g-4 p-3">
-                {productStock.map((p,index) => <Course productObj={p} key={index} edit={editProduct} del={deleteProduct} mvis={setVisibility}/>)}
+                {total>0 ?productStock.map((p,index) => <Course productObj={p} key={index} del={deleteProduct} mvis={setVisibility}/>):""}
             </div>
+            {total===0 ? <h1>no products to display check server</h1> :""}
             <div className="d-flex justify-content-center">
                 <form onSubmit={addProduct}>
-                    Id: <input type="text" name="id" onChange={updateProField} /> <br />
-                    image Link: <input type="text" name="image" onChange={updateProField} /> <br />
-                    Product Name: <input type="text" name="name" onChange={updateProField} /> <br />
-                    Price: <input type="number" name="price" onChange={updateProField} /> <br />
+                    Id: <input type="text" name="id" onChange={updateProField}  required /> <br />
+                    image Link: <input type="text" name="image" onChange={updateProField}  required/> <br />
+                    Product Name: <input type="text" name="name" onChange={updateProField} required /> <br />
+                    Price: <input type="number" name="price" onChange={updateProField} required /> <br />
                     <button type="reset" className='btn btn-danger' >reset</button>
                     <button type="submit" className='btn btn-primary' >Add Product</button>
                 </form>
             </div>
             {/* {showModal && temp ? "modal khulega":"nahi khulega"} */}
             {showModal && temp ? <EditModal method={editProduct} product={temp}/>:""}
-
         </div>
-
     )
 }
 export default AxiosCrudComponent

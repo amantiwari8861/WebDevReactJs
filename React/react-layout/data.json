@@ -9,7 +9,7 @@
     {
       "id": "3",
       "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
-      "name": "Realme 11",
+      "name": "Realme note 9",
       "price": 223332
     },
     {
@@ -21,14 +21,14 @@
     {
       "id": "6",
       "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
-      "name": "Spice 12T",
-      "price": 4700078
+      "name": "Spice stellar mi 362",
+      "price": "3500"
     },
     {
-      "id": "12",
+      "id": "13",
       "image": "https://react-bootstrap.netlify.app/img/logo.svg",
-      "name": "television 2",
-      "price": "2000"
+      "name": "Lipstick",
+      "price": "100"
     }
   ]
 }
