@@ -1,1 +1,37 @@
-[{"id":"2","image":"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false","name":"Redmi 45","price":4700},{"id":"3","image":"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false","name":"Realme note 9","price":223332},{"id":"4","image":"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false","name":"LG 845","price":78328732},{"id":"6","image":"https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false","name":"Spice stellar mi 362","price":"3500"},{"id":"13","image":"https://react-bootstrap.netlify.app/img/logo.svg","name":"Lipstick","price":"100"},{"id":23,"name":"hoodie","price":20000}]
+[
+    {
+        "id": "2",
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+        "name": "Redmi 45",
+        "price": 4700
+    },
+    {
+        "id": "3",
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+        "name": "Realme note 9",
+        "price": 223332
+    },
+    {
+        "id": "4",
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+        "name": "LG 845",
+        "price": 78328732
+    },
+    {
+        "id": "6",
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/p/q/-original-imagy5wfcgybpq5x.jpeg?q=70&crop=false",
+        "name": "Spice stellar mi 362",
+        "price": "3500"
+    },
+    {
+        "id": "13",
+        "image": "https://react-bootstrap.netlify.app/img/logo.svg",
+        "name": "Lipstick",
+        "price": "100"
+    },
+    {
+        "id": 23,
+        "name": "hoodie",
+        "price": 20000
+    }
+]
