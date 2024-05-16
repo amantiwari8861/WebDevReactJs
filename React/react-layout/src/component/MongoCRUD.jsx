@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const URL="http://localhost:5000/apiv1/products";
 const MongoCRUD = () => {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({ name: '', price: 0 });
@@ -11,7 +12,7 @@ const MongoCRUD = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('/api/products');
+                const response = await axios.get(URL);
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error);
@@ -22,7 +23,7 @@ const MongoCRUD = () => {
 
     const handleAddProduct = async () => {
         try {
-            const response = await axios.post('/api/products', newProduct);
+            const response = await axios.post(URL, newProduct);
             setProducts([...products, response.data]);
             setNewProduct({ name: '', price: 0 });
         } catch (error) {
@@ -32,7 +33,7 @@ const MongoCRUD = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            await axios.delete(`/api/products/${productId}`);
+            await axios.delete(URL+`${productId}`);
             setProducts(products.filter(product => product._id !== productId));
         } catch (error) {
             console.error('Error deleting product:', error);
@@ -41,7 +42,7 @@ const MongoCRUD = () => {
 
     const handleEditProduct = async () => {
         try {
-            await axios.put(`/api/products/${editProductId}`, editProductData);
+            await axios.put(URL+`${editProductId}`, editProductData);
             const updatedProducts = products.map(product =>
                 product._id === editProductId ? { ...product, ...editProductData } : product
             );

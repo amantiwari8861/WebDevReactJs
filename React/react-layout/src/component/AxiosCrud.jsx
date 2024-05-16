@@ -6,7 +6,8 @@ const ShowProductsWithUseEffect = () => {
     let [productStock, setProductStock] = useState([{}]);
     let [total, setTotal] = useState(0);
     let [product, setProduct] = useState({});
-    const URL = "http://localhost:5000/products";
+    // const URL = "http://localhost:5000/products";
+    const URL = "http://localhost:5000/apiv1/products";
 
     useEffect(() => {
         axios.get(URL)

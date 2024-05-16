@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 // Create Express application
 const app = express();
+require("dotenv").config()
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
