@@ -3,7 +3,7 @@ import Course from './Course'
 import axios from 'axios';
 import EditModal from './main/EditModal';
 
-const URL = "http://localhost:5000/apiv1/products";
+const URL = "http://localhost:5000/api/v1/products";
 const RenderMongoData = () => {
   let [productStock, setProductStock] = useState([{}]);
   let [total, setTotal] = useState(0);

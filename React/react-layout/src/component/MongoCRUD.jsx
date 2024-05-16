@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const URL="http://localhost:5000/apiv1/products";
+const URL="http://localhost:5000/api/v1/products";
 const MongoCRUD = () => {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({ name: '', price: 0 });

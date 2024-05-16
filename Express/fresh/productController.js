@@ -46,7 +46,7 @@ exports.insertMany = async (req, res) => {
 exports.updateProduct = async (req, res) => {
     console.log("updating product having id "+req.params.id+" with data :"+JSON.stringify(req.body));
     try {
-        const updatedProduct = await Product.findOneAndUpdate({prid:req.params.id}, req.body, { new: true });
+        const updatedProduct = await Product.findOneAndUpdate({"prid":req.params.id}, req.body, { new: true });
         if (!updatedProduct) return res.status(404).send("Product not found");
         res.json(updatedProduct);
     } catch (err) {
