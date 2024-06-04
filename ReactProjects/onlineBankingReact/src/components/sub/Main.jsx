@@ -1,12 +1,17 @@
+import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
+
 const Main = () => {
   return (
-    <div>
-      <h1>i am main<i className="fa fa-spinner fa-spin"></i>
-      <i className="fa fa-user-circle"></i>
+    <div className="container-fluid p-0 bg-primary" style={{ marginTop: "8vh"}}>
 
-      
-      
-      </h1>
+<Outlet/>
+
+      <div className="row gx-0 gy-0">
+        <div className="col-md-12">
+          <Footer />
+        </div>
+      </div>
     </div>
   )
 }
