@@ -1,6 +1,6 @@
 import SideBar from './SideBar.jsx'
-import Main from './sub/Main.jsx'
-import NavBar from './sub/NavBar.jsx'
+import Main from './Main.jsx'
+import NavBar from './NavBar.jsx'
 const Layout = () => {
   return (
     <>

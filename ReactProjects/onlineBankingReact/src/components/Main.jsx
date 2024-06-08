@@ -3,7 +3,7 @@ import Footer from './Footer'
 
 const Main = () => {
   return (
-    <div className="container-fluid p-0 bg-primary" style={{ marginTop: "8vh"}}>
+    <div className="container-fluid p-0" style={{ marginTop: "10vh"}}>
 
 <Outlet/>
 

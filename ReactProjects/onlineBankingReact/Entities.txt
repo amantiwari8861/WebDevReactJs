@@ -1,0 +1,4 @@
+Admin -> crud employee 
+Employee -> crud Customer ,freeze unfreeze acc.
+Customer -> create a new acc.,manage acc. ,profile ,login logout,
+            third party deposit send money,forget password 

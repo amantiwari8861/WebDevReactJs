@@ -1,18 +1,23 @@
 import './styles/App.css'
 import Layout from './components/Layout'
 import { Route, Routes } from 'react-router-dom'
-import AboutUs from './components/main-containers/AboutUs'
-import ContactUs from './components/main-containers/ContactUs'
-import Services from './components/main-containers/Services'
-import NotFound from './components/main-containers/NotFound'
-import Home from './components/main-containers/Home'
+import Home from './components/customer/Home'
+import ContactUs from './components/customer/ContactUs'
+import Services from './components/customer/Services'
+import AboutUs from './components/customer/AboutUs'
+import NotFound from './components/customer/NotFound'
+import AllCustomersTable from './components/admin/AllCustomersTable'
+import Login from './components/customer/Login'
+
 
 function App() {
   return (
 
     <Routes>
       <Route path="/" element={<Layout />} >
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/admin" element={<AllCustomersTable/>} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/services/:sname?" element={<Services />} />
