@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useTheme } from "./ThemeContext";
 
 const styles = {
   width: "16.66%",
@@ -10,43 +11,60 @@ const styles = {
   transition: "all 2s"
 };
 const SideBar = () => {
+  const { theme } = useTheme();
   return (
-    <aside style={styles} className="text-bg-dark">
-      <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{ height: "100vh" }}>
-        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <aside style={styles}>
+      <div className={`d-flex flex-column flex-shrink-0 p-3 ${theme === "dark" ? "text-bg-dark" : "text-bg-light"} ${theme === "dark" ? "text-light" : "text-dark"} `} style={{ height: "100vh" }}>
+        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-decoration-none">
           <svg className="bi pe-none me-2" width="40" height="32">link1</svg>
           <span className="fs-4">Sidebar</span>
         </a>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <Link to={"/"} className="nav-link active" aria-current="page">
-              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
+              }
+              aria-current="page"
+            >
+              <i className="fa fa-tachometer" aria-hidden="true" /> Home
+            </NavLink>
+
           </li>
           <li>
-            <Link to={"/about"} className="nav-link text-white">
-              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Dashboard</Link>
+            <NavLink to={"/about"} className={({ isActive }) =>
+              `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
+            }>
+              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Dashboard</NavLink>
           </li>
           <li>
 
-            <Link to={"/contactus"} className="nav-link text-white">
+            <NavLink to={"/contactus"} className={({ isActive }) =>
+              `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
+            }>
 
-              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Orders</Link>
+              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Orders</NavLink>
           </li>
           <li>
-            <Link to={"/services"} className="nav-link text-white">
-              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Products</Link>
+            <NavLink to={"/services"} className={({ isActive }) =>
+              `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
+            }>
+              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Products</NavLink>
           </li>
           <li>
             <a href="/bvbjv" >
             </a>
-            <Link to={"/"} className="nav-link text-white">
-              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Customers</Link>
+            <NavLink to={"/login"} className={({ isActive }) =>
+              `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
+            }>
+              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Customers</NavLink>
           </li>
         </ul>
         <hr />
         <div className="dropdown">
-          <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <a href="#" className="d-flex align-items-center  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
             <strong>mdo</strong>
           </a>

@@ -1,11 +1,16 @@
-import logo from '../assets/logo.png'
+import logo_dark from '../assets/logo_dark.png'
+import logo_light from '../assets/logo_light.png'
 import DarkLight from './DarkLight'
+import { useTheme } from './ThemeContext';
 const NavBar = () => {
+  const { theme } = useTheme();
+
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark" style={{position:"fixed",top:"0px",width:"100%",zIndex:"5"}}>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={theme} style={{position:"fixed",top:"0px",width:"100%",zIndex:"5"}}>
         <div className="container-fluid gx-3">
-          <a className="navbar-brand" href="#"><img src={logo} alt="" height={"40px"} width={"60px"} /> Unicorn bank 2.0 </a>
+          <a className="navbar-brand" href="#">
+            <img src={theme==="dark"?logo_dark:logo_light} alt="" height={"40px"} width={"60px"} /> Unicorn bank 2.0 </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
