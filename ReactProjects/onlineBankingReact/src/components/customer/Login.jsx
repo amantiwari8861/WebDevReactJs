@@ -1,6 +1,33 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import '../../styles/customer/login.css'
+import { useState } from 'react'
+import axios from 'axios';
 const Login = () => {
+
+  const [userData,setUserData]=useState({});
+  const navigate=useNavigate();
+  function handleFormUpdate(e)
+  {
+      const {name,value}=e.target;
+      // console.log(name+" : "+value);
+      setUserData({
+        ...userData,
+        [name]:value
+      });
+      // console.log(userData);
+  }
+  function validate(e)
+  {
+    e.preventDefault();
+    const URL="http://localhost:5000/api/v1/users/validate";
+    const req={"logindetails":JSON.stringify(userData)};
+    axios.post(URL,req).then(res=>{
+      sessionStorage.setItem("user",JSON.stringify(res.data));
+      navigate("/");
+    }
+    ).catch(err=>console.log(err));
+  }
+
   return (
     <div className="d-flex justify-content-center align-center mt-3 mb-3">
       <div className="form-container">
@@ -24,15 +51,15 @@ const Login = () => {
           </button>
         </div>
         <div className="line"></div>
-        <form className="form">
+        <form className="form" onSubmit={validate}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input required="" placeholder="Enter your email" name="email" id="email" type="text" />
+            <input required="" placeholder="Enter your email" name="email" id="email" type="text" onChange={handleFormUpdate} />
           </div>
 
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input required="" name="password" placeholder="Enter your password" id="password" type="password" />
+            <input required="" name="password" placeholder="Enter your password" id="password" type="password" onChange={handleFormUpdate} />
           </div>
 
           <button type="submit" className="form-submit-btn">Sign In</button>

@@ -42,3 +42,5 @@ db.categories.find();
 
 use("amazon");
 db.categories.find({"name":"phone"});
+
+

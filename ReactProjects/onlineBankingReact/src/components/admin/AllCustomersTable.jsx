@@ -14,7 +14,7 @@ const AllCustomersTable = () => {
 
     return (
         <div className='container'>
-            <table id="allEmployees" className="display" style={{ width: "100%" }}>
+            <table id="allEmployees" className="table table-striped display" style={{ width: "100%" }}>
                 <thead>
                     <tr>
                         <th>Name</th>

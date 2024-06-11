@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
+import { useEffect, useState } from "react";
 
 const styles = {
   width: "16.66%",
@@ -12,6 +13,11 @@ const styles = {
 };
 const SideBar = () => {
   const { theme } = useTheme();
+  const [user,setUser] = useState();
+  useEffect(() => {
+    setUser(JSON.parse(sessionStorage.getItem("user")));
+    console.log(user);
+  },[])
   return (
     <aside style={styles}>
       <div className={`d-flex flex-column flex-shrink-0 p-3 ${theme === "dark" ? "text-bg-dark" : "text-bg-light"} ${theme === "dark" ? "text-light" : "text-dark"} `} style={{ height: "100vh" }}>
@@ -53,8 +59,8 @@ const SideBar = () => {
               <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Products</NavLink>
           </li>
           <li>
-            
-            <NavLink to={"/login"} className={({ isActive }) =>
+
+            <NavLink to={"/admin/customers"} className={({ isActive }) =>
               `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
             }>
               <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Customers</NavLink>
@@ -64,7 +70,7 @@ const SideBar = () => {
         <div className="dropdown">
           <NavLink to="/" className={`d-flex align-items-center ${theme === "dark" ? "text-light" : "text-dark"} text-decoration-none dropdown-toggle`} data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
-            <strong>mdo</strong>
+            <strong>{user?.name || 'user'}</strong>
           </NavLink>
           <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><NavLink className="dropdown-item" to="/">New project...</NavLink></li>
