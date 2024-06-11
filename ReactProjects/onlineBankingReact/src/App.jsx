@@ -9,7 +9,6 @@ import NotFound from './components/customer/NotFound'
 import AllCustomersTable from './components/admin/AllCustomersTable'
 import Login from './components/customer/Login'
 
-
 function App() {
   return (
 

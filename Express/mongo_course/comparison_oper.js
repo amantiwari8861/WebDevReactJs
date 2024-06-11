@@ -1,7 +1,7 @@
 //* Comparison Operators
 
 //? 1 $eq: Matches values that are equal to the specified value.
-// db.products.find({'price': {$eq:699}})
+db.products.find({'price': {$eq:699}})
 
 //? 2: $ne: Matches values that are not equal to the specified value.
 // db.products.find({'price': {$ne:699}}).count()

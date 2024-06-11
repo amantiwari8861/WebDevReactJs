@@ -5,9 +5,8 @@ const Layout = () => {
   return (
     <>
       <NavBar />
-      <div className="container-fluid p-0">
+      <div className="container-fluid p-0 mt-3">
         <div className="row gx-0 gy-0">
-
           <div className="col-md-2">
             <SideBar />
           </div>

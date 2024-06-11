@@ -15,12 +15,11 @@ const SideBar = () => {
   return (
     <aside style={styles}>
       <div className={`d-flex flex-column flex-shrink-0 p-3 ${theme === "dark" ? "text-bg-dark" : "text-bg-light"} ${theme === "dark" ? "text-light" : "text-dark"} `} style={{ height: "100vh" }}>
-        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-decoration-none">
+        <NavLink href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-decoration-none">
           <svg className="bi pe-none me-2" width="40" height="32">link1</svg>
           <span className="fs-4">Sidebar</span>
-        </a>
-        <hr />
-        <ul className="nav nav-pills flex-column mb-auto">
+        </NavLink>
+        <ul className="nav nav-pills flex-column mb-auto mt-3">
           <li className="nav-item">
             <NavLink
               to="/"
@@ -54,8 +53,7 @@ const SideBar = () => {
               <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Products</NavLink>
           </li>
           <li>
-            <a href="/bvbjv" >
-            </a>
+            
             <NavLink to={"/login"} className={({ isActive }) =>
               `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
             }>
@@ -64,16 +62,16 @@ const SideBar = () => {
         </ul>
         <hr />
         <div className="dropdown">
-          <a href="#" className="d-flex align-items-center  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink to="/" className={`d-flex align-items-center ${theme === "dark" ? "text-light" : "text-dark"} text-decoration-none dropdown-toggle`} data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
             <strong>mdo</strong>
-          </a>
+          </NavLink>
           <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-            <li><a className="dropdown-item" href="#">New project...</a></li>
-            <li><a className="dropdown-item" href="#">Settings</a></li>
-            <li><a className="dropdown-item" href="#">Profile</a></li>
+            <li><NavLink className="dropdown-item" to="/">New project...</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/">Settings</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/">Profile</NavLink></li>
             <li><hr className="dropdown-divider" /></li>
-            <li><a className="dropdown-item" href="#">Sign out</a></li>
+            <li><NavLink className="dropdown-item" to="/">Sign out</NavLink></li>
           </ul>
         </div>
 
