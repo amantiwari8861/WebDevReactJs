@@ -17,25 +17,25 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-1 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                <NavLink className="nav-link active" aria-current="page" to="/web/">Home</NavLink>
               </li>
               <li className="nav-item dropdown">
-                <NavLink className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <NavLink className="nav-link dropdown-toggle" to="/web/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Services
                 </NavLink>
                 <ul className="dropdown-menu">
-                  <li><NavLink className="dropdown-item" to="/">Action</NavLink></li>
-                  <li><NavLink className="dropdown-item" to="/">Another action</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/web/services">Action</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/web/services">Another action</NavLink></li>
                   <li><hr className="dropdown-divider" /></li>
-                  <li><NavLink className="dropdown-item" to="/">Something else here</NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/web/services">Something else here</NavLink></li>
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">About Us</NavLink>
+                <NavLink className="nav-link" to="/web/about">About Us</NavLink>
               </li>
             </ul>
-            <NavLink to={"/login"} ><div className="btn btn-success">login</div></NavLink>
-            <NavLink to={"/signup"} ><div className="btn btn-primary ms-2">signup</div></NavLink>
+            <NavLink to={"/web/login"} ><div className="btn btn-success">login</div></NavLink>
+            <NavLink to={"/web/signup"} ><div className="btn btn-primary ms-2">signup</div></NavLink>
             <DarkLight />
           </div>
         </div>

@@ -29,7 +29,8 @@ const Login = () => {
   }
 
   return (
-    <div className="d-flex justify-content-center align-center mt-3 mb-3">
+    <div style={{marginTop:"9vh"}}>
+    <div className="d-flex justify-content-center align-center mb-3" >
       <div className="form-container">
         <div className="logo-container">
           Welcome Back!
@@ -71,6 +72,7 @@ const Login = () => {
           <NavLink className="signup-link link" to="/"> Sign up now</NavLink>
         </p>
       </div>
+    </div>
     </div>
   )
 }

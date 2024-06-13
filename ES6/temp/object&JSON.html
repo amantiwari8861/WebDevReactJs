@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let userdetails=["varun","raj",100,24,989792983,"Noida",201301];
+    let userDetails={
+        "name":"Varun",
+        surname:"Raj",
+        age:24,
+        skills:["c","c++","java","etc"],
+        address:{
+            city:{
+                cityName:"Noida",
+                sector:62
+            },
+            country:"india",
+            pincode:201301
+        },
+        // showAge:(e)=>console.log("my age is "+this.age),
+        // showAge:()=>console.log(this),
+        // showName:function (){console.log("my name is "+this)},
+        // showName:function (){console.log(this)},
+    };
+    //JS object
+    // console.log(userDetails.name);
+    // console.log(userDetails.address.city.cityName);
+    // console.log(userDetails.skills);
+
+    // let {address}=userDetails;
+    // console.log(address);
+
+    // let students=[
+    //     {name:"Aryan",age:22},
+    //     {name:"Varun",age:20},
+    //     {name:"raj",age:21},
+    // ];
+
+    // userDetails.showAge();
+    // userDetails.showName();
+
+    // JSON -> java script object notation
+
+    let data=JSON.stringify(userDetails);
+    // console.log(typeof(data));
+    let userObj=JSON.parse(data);
+    // console.log(userObj);
+    // console.log(typeof(userObj));
+
+
+    console.log(data.name);
+    console.log(userObj.name);
+
+    document.write(userObj+"<br>");
+    document.write(data);
+    document.write("<h1>Hello</h1>")
+    </script>
+</body>
+</html>

@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        let money = 1000000;
+        let money = 1000;
         let makePromise = new Promise((resolve, reject) => {
             if (money > 10000) {
                 resolve();
@@ -17,10 +17,12 @@
             else {
                 reject();
             }
-        })
+        });
+
+
         makePromise
             .then(() => { 
-                    console.log("gifting lamborgini"); 
+                    console.log("gifting phone"); 
                     return true; 
                 }, 
                 () => { 

@@ -20,47 +20,47 @@ const SideBar = () => {
   },[])
   return (
     <aside style={styles}>
-      <div className={`d-flex flex-column flex-shrink-0 p-3 ${theme === "dark" ? "text-bg-dark" : "text-bg-light"} ${theme === "dark" ? "text-light" : "text-dark"} `} style={{ height: "100vh" }}>
-        <NavLink href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-decoration-none">
+      <div className={`d-flex flex-column flex-shrink-0 p-3 ${theme === "dark" ? "text-bg-dark" : "text-bg-light"} ${theme === "dark" ? "text-light" : "text-dark"} `} style={{ height: "92vh" }}>
+        {/* <NavLink href="/web/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto  text-decoration-none">
           <svg className="bi pe-none me-2" width="40" height="32">link1</svg>
           <span className="fs-4">Sidebar</span>
-        </NavLink>
+        </NavLink> */}
         <ul className="nav nav-pills flex-column mb-auto mt-3">
+          <li>
+            <NavLink to={"/web/home"} className={({ isActive }) =>
+              `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
+            }>
+              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Dashboard</NavLink>
+          </li>
           <li className="nav-item">
             <NavLink
-              to="/"
+              to="/web/about"
               className={({ isActive }) =>
                 `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
               }
               aria-current="page"
             >
-              <i className="fa fa-tachometer" aria-hidden="true" /> Home
+              <i className="fa fa-tachometer" aria-hidden="true" /> AboutUs
             </NavLink>
 
           </li>
           <li>
-            <NavLink to={"/about"} className={({ isActive }) =>
-              `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
-            }>
-              <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Dashboard</NavLink>
-          </li>
-          <li>
 
-            <NavLink to={"/contactus"} className={({ isActive }) =>
+            <NavLink to={"/web/contactus"} className={({ isActive }) =>
               `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
             }>
 
               <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Orders</NavLink>
           </li>
           <li>
-            <NavLink to={"/services"} className={({ isActive }) =>
+            <NavLink to={"/web/services"} className={({ isActive }) =>
               `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
             }>
               <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Products</NavLink>
           </li>
           <li>
 
-            <NavLink to={"/admin/customers"} className={({ isActive }) =>
+            <NavLink to={"/web/admin/customers"} className={({ isActive }) =>
               `nav-link ${theme === "dark" ? "text-light" : "text-dark"} ${isActive ? "active" : ""}`
             }>
               <i className="fa fa-tachometer" aria-hidden="true" />{"  "}Customers</NavLink>
@@ -68,16 +68,16 @@ const SideBar = () => {
         </ul>
         <hr />
         <div className="dropdown">
-          <NavLink to="/" className={`d-flex align-items-center ${theme === "dark" ? "text-light" : "text-dark"} text-decoration-none dropdown-toggle`} data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink to="/web/" className={`d-flex align-items-center ${theme === "dark" ? "text-light" : "text-dark"} text-decoration-none dropdown-toggle`} data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
             <strong>{user?.name || 'user'}</strong>
           </NavLink>
           <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-            <li><NavLink className="dropdown-item" to="/">New project...</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/">Settings</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/">Profile</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/web/">New project...</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/web/">Settings</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/web/">Profile</NavLink></li>
             <li><hr className="dropdown-divider" /></li>
-            <li><NavLink className="dropdown-item" to="/">Sign out</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/web/">Sign out</NavLink></li>
           </ul>
         </div>
 

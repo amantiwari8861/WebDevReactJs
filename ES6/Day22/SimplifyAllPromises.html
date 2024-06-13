@@ -35,13 +35,18 @@
 
         async function schedleDay() 
         {
-            await taskScheduler(1000,()=>console.log("going institute"))
-            await taskScheduler(2000,()=>teach("Java"))
-            await taskScheduler(3000,()=>console.log("Having lunch"))
-            await taskScheduler(4000,()=>teach("Angular"))
-            await taskScheduler(5000,()=>teach("React"))
-            await taskScheduler(15000,()=>teach("React Native"))
-            await taskScheduler(6000,()=>console.log("Returning from institute"))            
+            try {
+                await taskScheduler(1000,()=>console.log("going institute"))
+                await taskScheduler(2000,()=>teach("Java"))
+                await taskScheduler(3000,()=>console.log("Having lunch"))
+                await taskScheduler(4000,()=>teach("Angular"))
+                await taskScheduler(5000,()=>teach("React"))
+                await taskScheduler(15000,()=>teach("React Native"))
+                await taskScheduler(6000,()=>console.log("Returning from institute"))            
+            } 
+            catch (error) {
+                console.log("Going to doctor! ");
+            }
         }
         schedleDay();
     </script>
