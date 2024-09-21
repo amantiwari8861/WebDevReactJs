@@ -1,0 +1,5 @@
+[0618/180856.326:WARNING:backend_impl.cc(1816)] Destroying invalid entry.
+[0618/180908.373:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/WAWebWorker.5e22d5986b70580d0557.worker.js (215)
+[0618/180908.374:INFO:CONSOLE(216)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/app.2c7f8dd150ae88037cde.js (216)
+[0618/180910.851:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
+[0618/180910.852:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)

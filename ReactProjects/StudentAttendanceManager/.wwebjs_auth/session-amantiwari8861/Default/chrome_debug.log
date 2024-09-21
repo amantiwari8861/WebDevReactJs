@@ -1,0 +1,4 @@
+[0618/180808.154:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
+[0618/180808.154:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
+[0618/180827.151:INFO:CONSOLE(0)] "Uncaught (in promise) TimeoutError", source: https://web.whatsapp.com/WAWebWorker.5e22d5986b70580d0557.worker.js (0)
+[0618/180827.163:INFO:CONSOLE(0)] "Uncaught (in promise) TimeoutError", source: https://web.whatsapp.com/WAWebWorker.5e22d5986b70580d0557.worker.js (0)
