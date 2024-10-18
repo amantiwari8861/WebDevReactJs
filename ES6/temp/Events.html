@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="greet()">click me </button> -->
+    <!-- <button id="btn">click me </button> -->
+    <!-- <input type="text" onfocus="change(this)"> -->
+    <!-- <input type="text" onkeydown="change(this)"> -->
+    <!-- <input type="text" onkeyup="change(this)"> -->
+    <!-- <input type="text" onchange="change(this)"> -->
+    <!-- <input type="text" id="btn"> -->
+    <h1 id="head">Lorem ipsum dolor sit amet.</h1>
+</body>
+<script >
+
+    // document.getElementById("btn")
+    // .addEventListener("keyup",(event)=>{
+    //     console.log(event);
+    //     console.log(event.target);
+    //     if (event.target.value==='A') {
+    //         event.target.style.backgroundColor="greenyellow";
+    //     }
+    //     console.log(event.target.value);
+    // });
+    document.getElementById("head").addEventListener("mouseover",(e)=>{
+        e.target.style.backgroundColor="yellow";
+        e.target.style.color="red";
+    });
+    document.getElementById("head").addEventListener("mouseout",(e)=>{
+        e.target.style.backgroundColor="black";
+        e.target.style.color="white";
+    });
+
+    
+
+    // function change(e) 
+    // {
+    //     console.log(e);
+    //     // console.log(e.target);
+    //     console.log(e.value);
+    //     e.style.outline="2px solid greenyellow";
+    //     e.style.border="none";
+    //     e.style.borderRadius="5px";
+    // }
+
+
+    // function greet() {
+    //     console.log("hi");
+    // }
+    // let btn=document.getElementById("btn");
+    // btn.addEventListener("click",()=>{
+    //     console.log("Hello There");
+    // });
+    // btn.onclick=greet;
+    // btn.onclick=()=>console.log("byee");
+
+    // btn.addEventListener("click",()=>{
+    //     btn.style.backgroundColor="greenyellow";
+    // });
+</script>
+</html>

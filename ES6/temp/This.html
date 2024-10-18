@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const person = {
+        //     name: "John",
+        //     age: 30,
+        //     greet() { console.log(this); },
+        //     greet2: () => console.log(this),
+        //     greet3: function () { console.log(this) },
+        //     nest: function () {
+        //         let self = this;
+        //         return () => {
+        //             console.log(self);
+        //         }
+        //     }
+        // };
+        //    person.greet(); 
+        //    let fxn= person.greet; 
+        //     fxn()
+        // person.greet();
+        // person.greet2();
+        // person.greet3();
+        // person.nest()()
+
+        // function User(name) {
+        //     this.name=name;
+        //     console.log(name);
+        // }
+        // let u=new User("aman");
+
+
+        const video = {
+            firstName: "Aman",
+            title: 'a',
+            tags: ['a', 'b', 'c'],
+            showTags() {
+                this.tags.forEach(function (tag) {
+                    console.log(this, tag);
+                }, this);
+            }
+        };
+        video.showTags();
+
+    </script>
+</body>
+
+</html>
