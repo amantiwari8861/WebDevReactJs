@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React with Vanilla JS</title>
+  <!-- Add React and ReactDOM via CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- Add Babel CDN to compile JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!-- Vanilla JS Part -->
+  <div id="vanilla">
+    <p><span><b>Hi</b></span></p>
+    <button id="vanilla-btn">Click Me (Vanilla JS)</button>
+    <p id="vanilla-text">This is vanilla JavaScript text.</p>
+  </div>
+
+  <!-- React Part -->
+  <div id="react-root"></div>
+
+  <script>
+    // Vanilla JavaScript Section
+    document.getElementById("vanilla-btn").addEventListener("click", function() {
+      document.getElementById("vanilla-text").textContent = "Text updated using Vanilla JavaScript!";
+    });
+
+    // Update the <b> tag with current date and time every second
+    setInterval(() => {
+      document.querySelector("p span b").innerHTML = new Date();
+    }, 1000);
+  </script>
+
+  <!-- React JSX Section: Add type="text/babel" to handle JSX -->
+  <script type="text/babel">
+    function App() {
+      const [text, setText] = React.useState("This is React text.");
+
+      const updateText = () => {
+        setText("Text updated using React!");
+      };
+
+      return (
+        <div>
+          <h1>React Section</h1>
+          <button onClick={updateText}>Click Me (React)</button>
+          <p>{text}</p>
+        </div>
+      );
+    }
+
+    // Render React component in the React root
+    ReactDOM.render(<App />, document.getElementById('react-root'));
+  </script>
+</body>
+</html>
